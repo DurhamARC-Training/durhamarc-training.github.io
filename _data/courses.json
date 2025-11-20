@@ -69,11 +69,11 @@
     {
       "name": "Iot Novice",
       "slug": "iot-novice",
-      "description": "An introduction to the Internet of things using a motorcontroller and sensors",
+      "description": "An introduction to the Internet of things using a microcontroller and sensors",
       "repo_url": "https://github.com/DurhamARC-Training/iot-novice",
       "pages_url": null,
       "topics": [],
-      "updated": "2025-04-16T21:27:41Z",
+      "updated": "2025-11-20T13:14:58Z",
       "is_fork": true,
       "stars": 0
     },
@@ -86,17 +86,6 @@
       "topics": [],
       "updated": "2025-08-13T08:19:44Z",
       "is_fork": false,
-      "stars": 0
-    },
-    {
-      "name": "Remark_theme",
-      "slug": "remark_theme",
-      "description": "[Draft] Durham ARC Remark theme",
-      "repo_url": "https://github.com/DurhamARC-Training/remark_theme",
-      "pages_url": "https://durhamarc-training.github.io/remark_theme/",
-      "topics": [],
-      "updated": "2024-04-15T15:56:51Z",
-      "is_fork": true,
       "stars": 0
     },
     {
@@ -217,5 +206,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2025-11-20T13:06:37.668Z"
+  "last_updated": "2025-11-20T13:20:21.306Z"
 }
