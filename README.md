@@ -1,144 +1,207 @@
 # Durham ARC Training Site
 
-Dynamic training course index for DurhamARC-Training organization.
+This repository contains the source code for the Durham Advanced Research Computing training course index at [https://durhamarc-training.github.io/](https://durhamarc-training.github.io/).
 
-## Setup Instructions
+## About
 
-### 1. Create Repository Structure
+This site provides a dynamic, automatically-updated index of all training courses and materials offered by Durham ARC. The site automatically discovers and categorizes repositories from the [DurhamARC-Training](https://github.com/DurhamARC-Training) organization.
 
-Create the following directory structure in your repository:
+## Features
 
-```
-durhamarc-training.github.io/
-├── _config.yml
-├── _layouts/
-│   └── default.html
-├── _data/
-│   └── courses.json (will be auto-generated)
-├── index.md
-├── assets/
-│   └── css/
-│       └── style.css
-├── .github/
-│   └── workflows/
-│       └── update-courses.yml
-├── scripts/
-│   ├── package.json
-│   └── fetch-courses.js
-└── README.md
-```
-
-### 2. Add Required Files
-
-Copy all the artifact files I've created into their respective locations:
-
-- `_config.yml` → root directory
-- `_layouts/default.html` → create `_layouts` folder
-- `index.md` → root directory
-- `assets/css/style.css` → create `assets/css` folders
-- `.github/workflows/update-courses.yml` → create `.github/workflows` folders
-- `scripts/package.json` → create `scripts` folder
-- `scripts/fetch-courses.js` → `scripts` folder
-
-### 3. Create Initial Data File
-
-Create an empty `_data` directory and add a placeholder `courses.json`:
-
-```json
-{
-  "materials": [],
-  "instances": [],
-  "last_updated": "2024-01-01T00:00:00Z"
-}
-```
-
-### 4. Enable GitHub Pages
-
-1. Go to repository Settings → Pages
-2. Under "Source", select `main` branch and `/ (root)` folder
-3. Click Save
-4. GitHub will automatically use Jekyll to build your site
-
-### 5. Initial Run
-
-The GitHub Action will run automatically when you push these files. You can also:
-
-1. Go to the "Actions" tab in your repository
-2. Select "Update Course Data" workflow
-3. Click "Run workflow" → "Run workflow"
-
-This will fetch all repository data and populate `_data/courses.json`.
-
-### 6. Verify
-
-After the action completes (2-3 minutes):
-
-1. Check that `_data/courses.json` has been created and committed
-2. Visit https://durhamarc-training.github.io/
-3. You should see your courses listed dynamically
+- **Automatic Updates**: A GitHub Action runs daily to fetch the latest course information
+- **Smart Categorization**: Automatically distinguishes between:
+  - Training materials (ongoing course content)
+  - Course instances (specific dated workshops)
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+- **Durham Brand Compliant**: Follows Durham University's visual identity guidelines
+- **Jekyll-Powered**: Static site generation for fast, reliable hosting via GitHub Pages
 
 ## How It Works
 
-1. **GitHub Action** runs daily at 6am UTC (or manually via workflow_dispatch)
-2. **fetch-courses.js** script:
-   - Fetches all public repositories from DurhamARC-Training
-   - Categorizes them as:
-     - **Course instances**: Repos matching `YYYY-MM-DD-DU` pattern
-     - **Training materials**: All other public repos
-   - Checks for GitHub Pages availability
-   - Generates `_data/courses.json`
-3. **Jekyll** uses Liquid templating in `index.md` to:
-   - Display all training materials as course cards
-   - List upcoming course instances
-   - Show past courses in a collapsible section
-4. **GitHub Pages** automatically rebuilds the site when data changes
+### Course Discovery
+
+The site automatically discovers courses from the organization's public repositories:
+
+1. **Training Materials**: Repositories like `Intermediate-Python`, `git-novice`, `BasicParallelProgramming`
+   - Listed under "Available Courses"
+   - Include links to course materials and GitHub repositories
+   - Tagged with relevant topics
+
+2. **Course Instances**: Repositories matching the pattern `YYYY-MM-DD-*` (e.g., `2025-07-03-DISKAH`, `2024-10-14-DU`)
+   - Automatically sorted by date
+   - Separated into "Upcoming" and "Past" courses
+   - Include course type detection based on repository metadata
+
+### Automatic Updates
+
+A scheduled GitHub Action workflow runs daily at 6am UTC to:
+1. Query the GitHub API for all public repositories in the organization
+2. Categorize and process repository data
+3. Generate an updated `_data/courses.json` file
+4. Commit changes if new courses are detected
+5. Trigger Jekyll to rebuild the site
+
+## Technology Stack
+
+- **[Jekyll](https://jekyllrb.com/)**: Static site generator (built into GitHub Pages)
+- **[Liquid](https://shopify.github.io/liquid/)**: Templating language for dynamic content
+- **[GitHub Actions](https://github.com/features/actions)**: Automated workflow execution
+- **[Octokit](https://github.com/octokit/rest.js)**: GitHub API client for Node.js
+- **GitHub Pages**: Free hosting and automatic deployment
+
+## Repository Structure
+
+```
+durhamarc-training.github.io/
+├── _config.yml              # Jekyll site configuration
+├── _layouts/
+│   └── default.html         # HTML layout template
+├── _data/
+│   └── courses.json         # Auto-generated course data
+├── index.md                 # Main page (Liquid template)
+├── assets/
+│   └── css/
+│       └── style.css        # Durham-branded styling
+├── .github/
+│   └── workflows/
+│       └── update-courses.yml  # Daily update automation
+├── scripts/
+│   ├── package.json         # Node.js dependencies
+│   └── fetch-courses.js     # Course discovery script
+└── README.md                # This file
+```
+
+## Adding New Courses
+
+### Adding Training Materials
+
+Simply create a new public repository in the [DurhamARC-Training](https://github.com/DurhamARC-Training) organization:
+
+1. Give it a descriptive name (e.g., `Advanced-R-Programming`)
+2. Add a clear description
+3. Add relevant GitHub topics/tags (e.g., `r`, `programming`, `statistics`)
+4. Enable GitHub Pages if you want to publish course materials
+
+The course will automatically appear on the site within 24 hours (or immediately if you trigger the workflow manually).
+
+### Adding Course Instances
+
+Create a repository with the naming pattern: `YYYY-MM-DD-SUFFIX`
+
+- `YYYY`: Four-digit year
+- `MM`: Two-digit month
+- `DD`: Two-digit day
+- `SUFFIX`: Any identifier (e.g., `DU`, `DISKAH`, `ONLINE`)
+
+**Examples:**
+- `2025-07-03-DISKAH` - July 3, 2025 course at DISKAH
+- `2024-10-14-DU` - October 14, 2024 course at Durham University
+- `2026-01-15-ONLINE` - January 15, 2026 online course
+
+The course will automatically:
+- Be sorted by date
+- Appear in "Upcoming" or "Past" sections
+- Have its course type detected from repository metadata
+- Link to the course page if GitHub Pages is enabled
+
+## Manual Workflow Trigger
+
+To update the site immediately without waiting for the scheduled run:
+
+1. Go to the [Actions](../../actions) tab
+2. Select "Update Course Data" workflow
+3. Click "Run workflow" → "Run workflow"
+4. Wait 2-3 minutes for completion
+
+## Development
+
+### Local Testing
+
+To test the site locally:
+
+```bash
+# Install Jekyll and dependencies
+gem install bundler jekyll
+
+# Clone the repository
+git clone https://github.com/DurhamARC-Training/durhamarc-training.github.io.git
+cd durhamarc-training.github.io
+
+# Serve locally
+jekyll serve
+
+# Visit http://localhost:4000
+```
+
+### Testing the Course Discovery Script
+
+```bash
+cd scripts
+npm install
+GITHUB_TOKEN=your_token_here GITHUB_ORG=DurhamARC-Training node fetch-courses.js
+```
+
+This will generate `_data/courses.json` based on current repositories.
 
 ## Customization
 
-### Update Course Type Detection
+### Styling
 
-Edit `scripts/fetch-courses.js`, function `getCourseType()` to improve course type detection based on repository topics, names, or descriptions.
+Edit `assets/css/style.css` to modify the site appearance. The current design follows [Durham University's brand guidelines](https://www.dur.ac.uk/brand/).
 
-### Modify Styling
+### Course Type Detection
 
-Edit `assets/css/style.css` to change colors, layouts, or add animations.
+The script attempts to detect course types based on:
+- Repository topics/tags
+- Repository names
+- Repository descriptions
 
-### Change Schedule
+To improve detection, edit the `getCourseType()` function in `scripts/fetch-courses.js`.
 
-Edit `.github/workflows/update-courses.yml` cron schedule:
+### Update Schedule
+
+To change the update frequency, edit the cron schedule in `.github/workflows/update-courses.yml`:
+
 ```yaml
-- cron: '0 6 * * *'  # Daily at 6am UTC
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6am UTC
 ```
 
-### Add New Sections
+## Excluded Repositories
 
-Edit `index.md` and add new Liquid template sections. Available data:
-- `site.data.courses.materials` - array of course materials
-- `site.data.courses.instances` - array of course instances
-- `site.data.courses.last_updated` - timestamp
+The following repositories are automatically excluded from the course listing:
+- `durhamarc-training.github.io` (this site's repository)
+- Any private repositories
 
-## Maintenance
+To exclude additional repositories, edit the `EXCLUDED_REPOS` array in `scripts/fetch-courses.js`.
 
-- **Add new courses**: Just create a new repository in the organization - it will appear automatically
-- **Course instances**: Name repositories `YYYY-MM-DD-DU` to be recognized as instances
-- **Topics/tags**: Add GitHub topics to repositories for better categorization
-- **Descriptions**: Repository descriptions appear on course cards
+## Contributing
 
-## Troubleshooting
+Contributions are welcome! Please:
 
-**Action fails**: Check the Actions tab for error logs. Common issues:
-- Missing Node.js dependencies (fixed by workflow automatically)
-- GitHub API rate limits (shouldn't happen with authenticated requests)
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Make your changes
+4. Test locally with Jekyll
+5. Submit a pull request
 
-**Site not updating**: 
-- Check that the action completed successfully
-- Verify `_data/courses.json` was committed
-- GitHub Pages can take 1-2 minutes to rebuild after commits
+For major changes, please open an issue first to discuss the proposed changes.
 
-**Missing courses**:
-- Ensure repositories are public (private repos are excluded)
-- Check repository name isn't in EXCLUDED_REPOS list
+## Support
+
+For questions or issues:
+
+- **Technical issues with the site**: [Open an issue](../../issues)
+- **Course content questions**: Contact the course instructors
+- **General ARC training inquiries**: Visit [Durham ARC Training](https://dur.ac.uk/research/institutes-and-centres/advanced-research-computing/training-)
 
 ## License
 
-This site infrastructure is MIT licensed. Course materials may have their own licenses.
+This site infrastructure is available under the MIT License. Individual course materials may have their own licenses - please check each course repository for details.
+
+## Acknowledgments
+
+- Built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/)
+- Design follows [Durham University Brand Guidelines](https://www.dur.ac.uk/brand/)
+- Inspired by [Software Carpentry](https://software-carpentry.org/) workshop organization
