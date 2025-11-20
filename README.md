@@ -91,10 +91,10 @@ Create a repository with the naming pattern: `YYYY-MM-DD-SUFFIX`
 - `YYYY`: Four-digit year
 - `MM`: Two-digit month
 - `DD`: Two-digit day
-- `SUFFIX`: Any identifier (e.g., `DU`, `DISKAH`, `ONLINE`)
+- `SUFFIX`: Any identifier (e.g., `DU`, `ABCDEF`, `ONLINE`)
 
 **Examples:**
-- `2025-07-03-DISKAH` - July 3, 2025 course at DISKAH
+- `2025-07-03-DISKAH` - July 3, 2025 course for the [DISKAH Network](https://culturedigitalskills.org/)
 - `2024-10-14-DU` - October 14, 2024 course at Durham University
 - `2026-01-15-ONLINE` - January 15, 2026 online course
 
