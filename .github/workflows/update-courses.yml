@@ -1,0 +1,62 @@
+name: Update Course Data
+
+on:
+  schedule:
+    # Run daily at 6am UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/fetch-courses.js'
+      - '.github/workflows/update-courses.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-courses:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: |
+          cd scripts
+          npm install @octokit/rest
+      
+      - name: Fetch course data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ORG: DurhamARC-Training
+        run: |
+          node scripts/fetch-courses.js
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code _data/courses.json || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add _data/courses.json
+          git commit -m "Update course data [skip ci]"
+          git push
+      
+      - name: Trigger Jekyll build
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          echo "Course data updated, Jekyll will rebuild automatically"

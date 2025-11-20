@@ -1,0 +1,60 @@
+# Site settings
+title: Durham ARC Training
+description: Advanced Research Computing Training Courses
+url: "https://durhamarc-training.github.io"
+baseurl: ""
+
+# Organization settings
+github_org: DurhamARC-Training
+durham_arc_url: "https://dur.ac.uk/research/institutes-and-centres/advanced-research-computing/training-"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Exclude files from processing
+exclude:
+  - scripts/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .github/
+
+# Include data files
+include:
+  - _data
+
+# Collections (optional, for future expansion)
+collections:
+  courses:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# SEO settings
+author: Durham Advanced Research Computing
+twitter:
+  username: DurhamUni
+  card: summary
+
+# Social links
+social:
+  name: Durham ARC Training
+  links:
+    - https://github.com/DurhamARC-Training
+
+# Site metadata
+lang: en-GB
+timezone: Europe/London

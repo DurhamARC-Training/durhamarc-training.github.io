@@ -1,0 +1,12 @@
+{
+  "name": "durhamarc-training-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for fetching and processing DurhamARC training course data",
+  "private": true,
+  "scripts": {
+    "fetch": "node fetch-courses.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.0.2"
+  }
+}
