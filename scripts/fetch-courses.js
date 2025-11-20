@@ -7,7 +7,7 @@ const octokit = new Octokit({
 });
 
 const ORG = process.env.GITHUB_ORG || 'DurhamARC-Training';
-const EXCLUDED_REPOS = ['durhamarc-training.github.io'];
+const EXCLUDED_REPOS = ['durhamarc-training.github.io', 'remark_theme'];
 const COURSE_INSTANCE_PATTERN = /^\d{4}-\d{2}-\d{2}-.+$/;
 
 async function fetchAllRepos() {
