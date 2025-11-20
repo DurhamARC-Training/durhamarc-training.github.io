@@ -10,7 +10,7 @@ title: Durham ARC Training Courses
         
         <div class="arc-link">
             <a href="{{ site.durham_arc_url }}" class="btn btn-highlight" target="_blank">
-                View Official Durham ARC Training Calendar
+                Visit Advanced Research Computing Website
             </a>
         </div>
     </header>
@@ -18,7 +18,7 @@ title: Durham ARC Training Courses
     <main>
         <!-- Available Courses Section -->
         <section>
-            <h2>Available Courses</h2>
+            <h2>Available Course Materials</h2>
             
             {% if site.data.courses and site.data.courses.materials and site.data.courses.materials.size > 0 %}
             <div class="course-grid">
@@ -90,7 +90,7 @@ title: Durham ARC Training Courses
                 </tbody>
             </table>
             {% else %}
-            <p class="no-data">No upcoming courses scheduled. Check the <a href="{{ site.durham_arc_url }}" target="_blank">official Durham ARC training calendar</a> for the latest information.</p>
+            <p class="no-data">No upcoming courses available on GitHub. This doesn't mean we're not running any, though! Check the <a href="{{ site.training_cal_url }}" target="_blank">official Durham ARC training calendar</a> for the latest information.</p>
             {% endif %}
         </section>
         
@@ -139,13 +139,11 @@ title: Durham ARC Training Courses
         <section>
             <h2>About Durham ARC</h2>
             <p>
-                Durham Advanced Research Computing provides training and support for researchers at Durham University. 
-                Our courses are designed to help you develop essential computational skills, from version control to 
-                parallel programming. We follow Software Carpentry teaching methods, emphasizing hands-on learning 
-                and peer support.
+                Durham University Advanced Research Computing provides training and support for researchers and postgraduate students at Durham University. 
+                Our courses are designed to help you develop essential computational skills, from version control to parallel programming. We follow Software Carpentry teaching methods, emphasizing hands-on learning and peer support.
             </p>
             <p>
-                Many of our courses are based on or adapted from <a href="https://software-carpentry.org/" target="_blank">Software Carpentry</a> 
+                Some of our courses are based on or adapted from <a href="https://software-carpentry.org/" target="_blank">Software Carpentry</a> 
                 materials, which are openly licensed and community-developed.
             </p>
         </section>

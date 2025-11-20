@@ -1,12 +1,13 @@
 # Site settings
-title: Durham ARC Training
+title: Durham University ARC Training
 description: Advanced Research Computing Training Courses
 url: "https://durhamarc-training.github.io"
 baseurl: ""
 
 # Organization settings
 github_org: DurhamARC-Training
-durham_arc_url: "https://dur.ac.uk/research/institutes-and-centres/advanced-research-computing/training-"
+durham_arc_url: "https://dur.ac.uk/arc/"
+training_cal_url: "https://dur.ac.uk/research/institutes-and-centres/advanced-research-computing/training-/arc-training-course-schedule/"
 
 # Build settings
 markdown: kramdown
