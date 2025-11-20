@@ -20,7 +20,7 @@ title: Durham ARC Training Courses
         <section>
             <h2>Available Courses</h2>
             
-            {% if site.data.courses.materials.size > 0 %}
+            {% if site.data.courses and site.data.courses.materials and site.data.courses.materials.size > 0 %}
             <div class="course-grid">
                 {% for material in site.data.courses.materials %}
                 <div class="course-card">
@@ -60,10 +60,9 @@ title: Durham ARC Training Courses
             <h2>Upcoming Course Instances</h2>
             
             {% assign today = 'now' | date: '%Y-%m-%d' %}
-            {% if site.data.courses.instances %}
-            {% assign upcoming = site.data.courses.instances | where_exp: "item", "item.date >= today" | sort: "date" %}
-            {% else %}
             {% assign upcoming = "" | split: "," %}
+            {% if site.data.courses and site.data.courses.instances %}
+                {% assign upcoming = site.data.courses.instances | where_exp: "item", "item.date >= today" | sort: "date" %}
             {% endif %}
             
             {% if upcoming.size > 0 %}
@@ -99,7 +98,10 @@ title: Durham ARC Training Courses
         <section id="past">
             <h2>Past Course Instances</h2>
             
-            {% assign past = site.data.courses.instances | where_exp: "item", "item.date < today" | sort: "date" | reverse %}
+            {% assign past = "" | split: "," %}
+            {% if site.data.courses and site.data.courses.instances %}
+                {% assign past = site.data.courses.instances | where_exp: "item", "item.date < today" | sort: "date" | reverse %}
+            {% endif %}
             
             {% if past.size > 0 %}
             <details>
