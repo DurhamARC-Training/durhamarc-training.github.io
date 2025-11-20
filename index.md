@@ -60,7 +60,11 @@ title: Durham ARC Training Courses
             <h2>Upcoming Course Instances</h2>
             
             {% assign today = 'now' | date: '%Y-%m-%d' %}
+            {% if site.data.courses.instances %}
             {% assign upcoming = site.data.courses.instances | where_exp: "item", "item.date >= today" | sort: "date" %}
+            {% else %}
+            {% assign upcoming = "" | split: "," %}
+            {% endif %}
             
             {% if upcoming.size > 0 %}
             <table class="upcoming-table">
