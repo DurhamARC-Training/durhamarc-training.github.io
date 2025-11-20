@@ -1,5 +1,224 @@
 {
-  "materials": [],
-  "instances": [],
-  "last_updated": "2025-01-01T00:00:00Z"
+  "materials": [
+    {
+      "name": "2025 07 03 DISKAH",
+      "slug": "2025-07-03-DISKAH",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-07-03-DISKAH",
+      "pages_url": "https://durhamarc-training.github.io/2025-07-03-DISKAH/",
+      "topics": [],
+      "updated": "2025-07-03T08:24:25Z",
+      "is_fork": false,
+      "stars": 0
+    },
+    {
+      "name": "BasicParallelProgramming",
+      "slug": "BasicParallelProgramming",
+      "description": "ARC course",
+      "repo_url": "https://github.com/DurhamARC-Training/BasicParallelProgramming",
+      "pages_url": "https://durhamarc-training.github.io/BasicParallelProgramming/",
+      "topics": [],
+      "updated": "2025-10-30T10:12:49Z",
+      "is_fork": false,
+      "stars": 0
+    },
+    {
+      "name": "BasicProgrammingPython",
+      "slug": "BasicProgrammingPython",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/BasicProgrammingPython",
+      "pages_url": "https://durhamarc-training.github.io/BasicProgrammingPython/",
+      "topics": [],
+      "updated": "2025-11-07T16:49:17Z",
+      "is_fork": false,
+      "stars": 3
+    },
+    {
+      "name": "Common Tools For Teaching",
+      "slug": "common-tools-for-teaching",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/common-tools-for-teaching",
+      "pages_url": null,
+      "topics": [],
+      "updated": "2025-08-15T14:03:55Z",
+      "is_fork": false,
+      "stars": 0
+    },
+    {
+      "name": "DataAnalysisPython",
+      "slug": "DataAnalysisPython",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/DataAnalysisPython",
+      "pages_url": "https://durhamarc-training.github.io/DataAnalysisPython/",
+      "topics": [],
+      "updated": "2025-08-19T20:42:27Z",
+      "is_fork": false,
+      "stars": 1
+    },
+    {
+      "name": "Git Novice",
+      "slug": "git-novice",
+      "description": "Software Carpentry introduction to Git for novices.",
+      "repo_url": "https://github.com/DurhamARC-Training/git-novice",
+      "pages_url": "https://durhamarc-training.github.io/git-novice/",
+      "topics": [],
+      "updated": "2025-07-02T12:55:15Z",
+      "is_fork": true,
+      "stars": 0
+    },
+    {
+      "name": "Intermediate Python",
+      "slug": "Intermediate-Python",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/Intermediate-Python",
+      "pages_url": "https://durhamarc-training.github.io/Intermediate-Python/",
+      "topics": [],
+      "updated": "2025-11-18T14:39:26Z",
+      "is_fork": false,
+      "stars": 1
+    },
+    {
+      "name": "Iot Novice",
+      "slug": "iot-novice",
+      "description": "An introduction to the Internet of things using a motorcontroller and sensors",
+      "repo_url": "https://github.com/DurhamARC-Training/iot-novice",
+      "pages_url": null,
+      "topics": [],
+      "updated": "2025-04-16T21:27:41Z",
+      "is_fork": true,
+      "stars": 0
+    },
+    {
+      "name": "PythonCourse Jupyterlite",
+      "slug": "PythonCourse-jupyterlite",
+      "description": "Training course materials",
+      "repo_url": "https://github.com/DurhamARC-Training/PythonCourse-jupyterlite",
+      "pages_url": null,
+      "topics": [],
+      "updated": "2025-08-13T08:19:44Z",
+      "is_fork": false,
+      "stars": 0
+    },
+    {
+      "name": "Remark_theme",
+      "slug": "remark_theme",
+      "description": "[Draft] Durham ARC Remark theme",
+      "repo_url": "https://github.com/DurhamARC-Training/remark_theme",
+      "pages_url": "https://durhamarc-training.github.io/remark_theme/",
+      "topics": [],
+      "updated": "2024-04-15T15:56:51Z",
+      "is_fork": true,
+      "stars": 0
+    },
+    {
+      "name": "Shell Novice",
+      "slug": "shell-novice",
+      "description": "The Unix Shell",
+      "repo_url": "https://github.com/DurhamARC-Training/shell-novice",
+      "pages_url": "https://durhamarc-training.github.io/shell-novice/",
+      "topics": [],
+      "updated": "2025-04-15T08:46:30Z",
+      "is_fork": true,
+      "stars": 0
+    }
+  ],
+  "instances": [
+    {
+      "date": "2025-10-16",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2025-10-16-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-10-16-DU",
+      "topics": []
+    },
+    {
+      "date": "2025-10-15",
+      "course_type": "Unix Shell",
+      "description": "Unix Shell 15/10/25 Carpentries site",
+      "url": "https://durhamarc-training.github.io/2025-10-15-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-10-15-DU",
+      "topics": []
+    },
+    {
+      "date": "2025-05-16",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2025-05-16-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-05-16-DU",
+      "topics": []
+    },
+    {
+      "date": "2025-05-08",
+      "course_type": "Unix Shell",
+      "description": "Unix Shell 07/05/25 Carpentries site",
+      "url": "https://durhamarc-training.github.io/2025-05-08-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-05-08-DU",
+      "topics": []
+    },
+    {
+      "date": "2025-02-14",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2025-02-14-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-02-14-DU",
+      "topics": []
+    },
+    {
+      "date": "2025-02-13",
+      "course_type": "Unix Shell",
+      "description": "Unix Shell 13/02/25 Carpentries site",
+      "url": "https://durhamarc-training.github.io/2025-02-13-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-02-13-DU",
+      "topics": []
+    },
+    {
+      "date": "2024-10-14",
+      "course_type": "Research Computing Course",
+      "description": "",
+      "url": "https://durhamarc-training.github.io/2024-10-14-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2024-10-14-DU",
+      "topics": []
+    },
+    {
+      "date": "2024-07-05",
+      "course_type": "Unix Shell",
+      "description": "Carpentries Unix Shell Training Website",
+      "url": "https://durhamarc-training.github.io/2024-07-05-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2024-07-05-DU",
+      "topics": []
+    },
+    {
+      "date": "2024-04-19",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2024-04-19-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2024-04-19-DU",
+      "topics": []
+    },
+    {
+      "date": "2024-03-01",
+      "course_type": "Unix Shell",
+      "description": "Carpentries Unix Shell Training Website",
+      "url": "https://durhamarc-training.github.io/2024-03-01-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2024-03-01-DU",
+      "topics": []
+    },
+    {
+      "date": "2023-12-13",
+      "course_type": "Unix Shell",
+      "description": "Carpentries Unix Shell Training Website",
+      "url": "https://durhamarc-training.github.io/2023-12-13-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2023-12-13-DU",
+      "topics": []
+    },
+    {
+      "date": "2023-10-09",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2023-10-09-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2023-10-09-DU",
+      "topics": []
+    }
+  ],
+  "last_updated": "2025-11-20T12:59:10.471Z"
 }
