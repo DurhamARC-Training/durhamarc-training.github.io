@@ -1,17 +1,6 @@
 {
   "materials": [
     {
-      "name": "2025 07 03 DISKAH",
-      "slug": "2025-07-03-DISKAH",
-      "description": "Training course materials",
-      "repo_url": "https://github.com/DurhamARC-Training/2025-07-03-DISKAH",
-      "pages_url": "https://durhamarc-training.github.io/2025-07-03-DISKAH/",
-      "topics": [],
-      "updated": "2025-07-03T08:24:25Z",
-      "is_fork": false,
-      "stars": 0
-    },
-    {
       "name": "BasicParallelProgramming",
       "slug": "BasicParallelProgramming",
       "description": "ARC course",
@@ -218,7 +207,15 @@
       "url": "https://durhamarc-training.github.io/2023-10-09-DU/",
       "repo_url": "https://github.com/DurhamARC-Training/2023-10-09-DU",
       "topics": []
+    },
+    {
+      "date": null,
+      "course_type": "Research Computing Course",
+      "description": "",
+      "url": "https://durhamarc-training.github.io/2025-07-03-DISKAH/",
+      "repo_url": "https://github.com/DurhamARC-Training/2025-07-03-DISKAH",
+      "topics": []
     }
   ],
-  "last_updated": "2025-11-20T12:59:10.471Z"
+  "last_updated": "2025-11-20T13:06:37.668Z"
 }
