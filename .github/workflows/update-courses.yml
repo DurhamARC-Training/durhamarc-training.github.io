@@ -32,15 +32,16 @@ jobs:
       
       - name: Install dependencies
         run: |
-          cd scripts
           npm install @octokit/rest
+        working-directory: ./scripts
       
       - name: Fetch course data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ORG: DurhamARC-Training
         run: |
-          node scripts/fetch-courses.js
+          node fetch-courses.js
+        working-directory: ./scripts
       
       - name: Check for changes
         id: git-check
