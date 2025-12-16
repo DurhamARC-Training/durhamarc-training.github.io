@@ -102,6 +102,14 @@
   ],
   "instances": [
     {
+      "date": "2026-01-22",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries Git Training Website",
+      "url": "https://durhamarc-training.github.io/2026-01-22-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2026-01-22-DU",
+      "topics": []
+    },
+    {
       "date": "2026-01-15",
       "course_type": "Research Computing Course",
       "description": "Using Linux and the Command Line (15/01/2026)",
@@ -214,5 +222,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2025-12-15T06:07:34.336Z"
+  "last_updated": "2025-12-16T06:07:16.567Z"
 }
