@@ -84,7 +84,7 @@
       "repo_url": "https://github.com/DurhamARC-Training/PythonCourse-jupyterlite",
       "pages_url": null,
       "topics": [],
-      "updated": "2026-02-04T13:27:59Z",
+      "updated": "2026-02-05T14:07:57Z",
       "is_fork": false,
       "stars": 0
     },
@@ -95,7 +95,7 @@
       "repo_url": "https://github.com/DurhamARC-Training/shell-novice",
       "pages_url": "https://durhamarc-training.github.io/shell-novice/",
       "topics": [],
-      "updated": "2025-04-15T08:46:30Z",
+      "updated": "2026-02-05T09:41:17Z",
       "is_fork": true,
       "stars": 0
     }
@@ -222,5 +222,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2026-02-05T06:21:50.388Z"
+  "last_updated": "2026-02-06T06:19:25.552Z"
 }
