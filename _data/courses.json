@@ -102,6 +102,14 @@
   ],
   "instances": [
     {
+      "date": "2026-04-29",
+      "course_type": "Version Control with Git",
+      "description": "Carpentries github page for Git/GitHub 2026-04-29",
+      "url": "https://durhamarc-training.github.io/2026-04-29-DU/",
+      "repo_url": "https://github.com/DurhamARC-Training/2026-04-29-DU",
+      "topics": []
+    },
+    {
       "date": "2026-04-28",
       "course_type": "Unix Shell",
       "description": "Unix shell page for 28/04 from carpentries template",
@@ -230,5 +238,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2026-04-23T06:40:11.838Z"
+  "last_updated": "2026-04-24T06:40:51.934Z"
 }
