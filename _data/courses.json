@@ -5,7 +5,7 @@
       "slug": "BasicParallelProgramming",
       "description": "ARC course",
       "repo_url": "https://github.com/DurhamARC-Training/BasicParallelProgramming",
-      "pages_url": "https://durhamarc-training.github.io/BasicParallelProgramming/",
+      "pages_url": null,
       "topics": [],
       "updated": "2026-02-17T07:49:43Z",
       "is_fork": false,
@@ -238,5 +238,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2026-05-01T06:56:43.433Z"
+  "last_updated": "2026-05-02T06:40:55.966Z"
 }
