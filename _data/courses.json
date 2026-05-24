@@ -38,7 +38,7 @@
       "slug": "DataAnalysisPython",
       "description": "Training course materials",
       "repo_url": "https://github.com/DurhamARC-Training/DataAnalysisPython",
-      "pages_url": null,
+      "pages_url": "https://durhamarc-training.github.io/DataAnalysisPython/",
       "topics": [],
       "updated": "2026-05-22T14:01:25Z",
       "is_fork": false,
@@ -153,7 +153,7 @@
       "date": "2025-05-16",
       "course_type": "Version Control with Git",
       "description": "Carpentries Git Training Website",
-      "url": "https://github.com/DurhamARC-Training/2025-05-16-DU",
+      "url": "https://durhamarc-training.github.io/2025-05-16-DU/",
       "repo_url": "https://github.com/DurhamARC-Training/2025-05-16-DU",
       "topics": []
     },
@@ -177,7 +177,7 @@
       "date": "2025-02-13",
       "course_type": "Unix Shell",
       "description": "Unix Shell 13/02/25 Carpentries site",
-      "url": "https://github.com/DurhamARC-Training/2025-02-13-DU",
+      "url": "https://durhamarc-training.github.io/2025-02-13-DU/",
       "repo_url": "https://github.com/DurhamARC-Training/2025-02-13-DU",
       "topics": []
     },
@@ -238,5 +238,5 @@
       "topics": []
     }
   ],
-  "last_updated": "2026-05-23T06:56:28.850Z"
+  "last_updated": "2026-05-24T07:08:07.033Z"
 }
